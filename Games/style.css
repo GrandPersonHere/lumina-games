@@ -1,0 +1,82 @@
+/* Apply box-sizing, margin, and padding to all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #431475 0%, #331433 100%);
+  background-size: cover; /* Ensure the background covers the whole area */
+  background-attachment: fixed; /* Make the background sticky */
+  color: white;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styling */
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 2vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* Navigation styling */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 3vw; /* Adjust spacing between items */
+  background-color: white;
+  padding: 2vh 35vw; /* Adjust padding using viewport units */
+  border-radius: 2vw; /* Rounded edges for the background */
+}
+
+/* Navigation list item styling */
+nav ul li {
+  display: inline-block;
+}
+
+/* Navigation icon styling */
+nav ul li img {
+  width: 3vw; /* Icon size relative to viewport width */
+  height: 3vw;
+  margin-left: 0vw;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for icons */
+nav ul li img:hover {
+  transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+
+/* Container for boxes */
+.boxes-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4vw;
+  max-width: 80vw; /* Ensures the container adjusts based on screen size */
+  margin: 15vh auto 0 auto; /* Space below header and centered horizontally */
+  justify-content: center;
+}
+
+/* Individual box styling */
+.box {
+  width: 9vw;
+  height: 9vw;
+  background-color: black;
+  border-radius: 2vw; /* Rounded corners for boxes */
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    padding: 2vh 5vw;
+  }
+}
